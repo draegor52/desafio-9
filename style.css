@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55, #2878C8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Título */
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Buscador */
+
+#ciudadInput {
+    width: 250px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+#ciudadInput:focus {
+    box-shadow: 0 0 8px #70c1ff;
+}
+
+#buscar {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2878C8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#buscar:hover {
+    background-color: #145a9e;
+    transform: scale(1.05);
+}
+
+/* Tarjeta del clima */
+
+.container {
+    margin-top: 35px;
+    width: 320px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Ciudad */
+
+#ciudad {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Temperatura */
+
+#temperatura {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+#temperatura sup {
+    font-size: 22px;
+}
+
+/* Icono */
+
+#icono {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* Descripción */
+
+#descripcion {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    #ciudadInput {
+        width: 190px;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
